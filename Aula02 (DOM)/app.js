@@ -1,19 +1,47 @@
-var inputElement = document.getElementById('nome');
-console.log(inputElement);
+var listElement= document.querySelector('#app ul')
+var inputElement= document.querySelector('#app input')
+var buttonElement= document.querySelector('#app button')
 
-var inputElement2 = document.getElementsByClassName('tarefa');
-console.log(inputElement2);
+var todos=[
+    'Fazer café',
+    'Estudar',
+    'Acessar nosso site'
+];
 
-var mudanca=document.querySelector('input')
-console.log(mudanca);
+function rederTodos(){
+    listElement.innerHTML='';
+    for(todo of todos){
+        var todoElement =document.createElement('li');
+        var todoText=document.createTextNode(todo);
 
-function btn1(){
-    alert('Helton 01')
+        var linkElement=document.createElement('a');
+
+        linkElement.setAttribute('href','#');
+
+        var pos=todos.indexOf(todo);
+    linkElement.setAttribute('onclick','deleteTodo('+ pos +')');
+        
+        var linkText=document.createTextNode('Excluir');
+
+        linkElement.appendChild(linkText);
+
+        todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+        listElement.appendChild(todoElement);
+    }
 }
-function btn2(){
-    alert('Helton 02')
-}
-function btn3(){
-    alert('Helton 03')
+rederTodos();
+
+function addTodo(){
+    var todoText= inputElement.value;
+    todos.push(todoText);
+    inputElement.value='';
+    rederTodos();
 }
 
+buttonElement.onclick=addTodo;
+
+function deleteTodo(pos){
+    todos.splice(pos,1);
+    rederTodos();
+}
