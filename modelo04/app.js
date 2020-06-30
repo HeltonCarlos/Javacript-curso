@@ -1,5 +1,5 @@
 
-var hora = 22;
+var hora = 15;
 
 if(hora>=0 && hora<=11){
     console.log('bom dia')
