@@ -6,7 +6,8 @@ function enviar(){
     if(total==''){
         vl.innerHTML+=`Digite um numero`
     }else {
-        vl.innerHTML+=`Divisão de ${total} é de:
+        vl.innerHTML+=`A Multiplicação de ${total} é de:
+        <br>${total}x1=${total}
         <br>${total}x2=${total*2}
         <br>${total}x3=${total*3}
         <br>${total}x4=${total*4}
