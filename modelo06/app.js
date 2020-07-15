@@ -16,7 +16,8 @@ function enviar(){
         <br>${total}x7=${total*7}
         <br>${total}x8=${total*8}
         <br>${total}x9=${total*9}
-        <br>${total}x10=${total*10}`
+        <br>${total}x10=${total*10}
+        <br>`
     }
     
 }
