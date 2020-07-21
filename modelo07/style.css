@@ -8,6 +8,12 @@ p{margin-top: 20px;font-size: 15px;}
 
 .container{width: 80%;margin: 0 auto;text-align: center;padding: 20px;}
 
+#resposta{padding: 20px;font-size: 20px;}
+
 input{padding: 5px;}
 
+table{padding: 20px;}
 
+strong{font-size: 20px;}
+
+td{border-bottom: 1px solid #fff;padding-bottom: 10px;}
