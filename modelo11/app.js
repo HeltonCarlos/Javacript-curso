@@ -22,7 +22,15 @@ const item = [
     iniciandoLoja=()=>{
         var containerProduto = document.getElementById('produtos')
         item.map((valor)=>{
-            console.log(valor.nome)
+            containerProduto.innerHTML+=`
+
+            <div class="produtos-sigle">
+            <img src="`+valor.img+`"/>
+            <p>`+valor.nome+`</p>
+            <a key ="`+valor.id+`" href="">Adionar Carrinho</a>
+            </div>
+            
+            `;
         })
     }
     iniciandoLoja()
